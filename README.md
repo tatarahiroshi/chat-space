@@ -41,6 +41,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|groupname|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -53,9 +54,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
-|password|integer|null: false, unique: true|
-|email|integer|null: false, unique: true|
+|name|text|null: false|
+|password|text|null: false, unique: true|
+|email|text|null: false, unique: true|
 
 
 ### Association
@@ -68,7 +69,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
+|body|text|null: false|
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
