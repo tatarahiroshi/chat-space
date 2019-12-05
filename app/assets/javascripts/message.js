@@ -163,8 +163,15 @@ $('.new_message').on('submit', function(e){
    return false;
  });
 
-
+ 
   var reloadMessages = function() {
+
+    var url = $(location).attr('pathname');
+    // console.log(url)
+　　 
+    // let reg =  new RegExp("http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
+    if(url.match('messages')){
+    
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
 
     var last_message_id = $('.message:last').data('message-id')
@@ -227,7 +234,8 @@ $('.new_message').on('submit', function(e){
       console.log('error');     
     });
   };
+  };
   setInterval(reloadMessages, 7000);
 
-});
+ });
 
